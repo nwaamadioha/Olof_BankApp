@@ -9,7 +9,7 @@ import SupportIcon from '@mui/icons-material/SupportAgentOutlined';
 const ListItems = () => {
   return (
     <>
-      <ListItemButton>
+      <ListItemButton href="/">
         <ListItemIcon>
           <HomeIcon />
         </ListItemIcon>
@@ -21,7 +21,7 @@ const ListItems = () => {
         </ListItemIcon>
         <ListItemText primary="Support" />
       </ListItemButton>
-      <ListItemButton>
+      <ListItemButton href="/login">
         <ListItemIcon>
           <LogoutIcon />
         </ListItemIcon>

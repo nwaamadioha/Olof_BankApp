@@ -119,6 +119,7 @@ export const FormButton = styled.button`
 export const Text = styled.span`
   text-align: center;
   margin-top: 24px;
-  color: #fff;
+  color: red;
   font-size: 14px;
 `
+

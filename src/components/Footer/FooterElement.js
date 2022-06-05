@@ -3,21 +3,21 @@ import {Link} from "react-router-dom";
 
 
 export const FooterContainer = styled.div`
-  background: #fff;
+  background: #bec7f8;
 `
 export const FooterWrap = styled.div`
-  padding: 48px 24px;
+  padding: 16px 10px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 `
 export const FooterLinksContainer = styled.div`
-  display:flex;
-  justify-content: center;
-
+  display: flex;
+  justify-content: start;
+  width: 70%;
   @media screen and (max-width: 820px) {
       padding-top: 32px;
   }
@@ -51,6 +51,7 @@ export const FooterLinkItems = styled.div`
 export const FooterLinkTitle = styled.h1`
   font-size: 14px;
   margin-bottom: 16px;
+  align-self: center;
 `
 
 export const FooterLink = styled(Link)`
@@ -66,8 +67,11 @@ export const FooterLink = styled(Link)`
 `
 
 export const FooterBottom = styled.section`
-  max-width: 1000px;
+  height:80px;
   width: 100%;
+  display: grid;
+  align-items: center;
+  background-color: black;
 `
 
 export const FooterBottomWrap = styled.div`
@@ -75,7 +79,7 @@ export const FooterBottomWrap = styled.div`
   justify-content: space-between;
   align-items: center;
   max-width: 1100px;
-  margin: 40px auto 0 auto;
+  margin: 20px auto 0 auto;
 
   @media screen and (max-width: 820px) {
       flex-direction: column;
@@ -84,14 +88,15 @@ export const FooterBottomWrap = styled.div`
 
 export const SocialLogo = styled.div`
   color: #2643e9;
-  justify-content: start;
+  justify-content: top;
   cursor: pointer;
   text-decoration: none;
   font-size: 1.5rem;
   display: flex;
-  align-items: center;
+  align-items: start;
   margin-bottom: 5px;
   font-weight: bold;
+  width: 30%;
 `
 
 export const WebsiteRights = styled.div`

@@ -1,17 +1,27 @@
 import * as React from 'react';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 import MuiDrawer from '@mui/material/Drawer';
-import {Box, Button,Container,CssBaseline,Grid,IconButton,Link,List,Paper,Toolbar,Typography,Divider} from '@mui/material';
+import Box from '@mui/material/Box';
 import MuiAppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import List from '@mui/material/List';
+import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 
 
+
 import { AuthContext } from '../../context/AuthContext.js';
-import Password from "./Password";
-import Transactions from './Transactions';
-import Transfer from "./Transfer"
-import ListItems from './ListSection';
+import CreateUser from "./CreateUser"
+import Users from './Users';
+import ListItems from '../Dashboard/ListSection';
 
 function Copyright(props) {
   return (
@@ -80,7 +90,6 @@ function DashboardContent() {
   const toggleDrawer = () => {
     setOpen(!open);
   };
-  const [showResetPassword, setShowResetPassword] = React.useState(false)
   const { user } = React.useContext(AuthContext);
   return (
     <ThemeProvider theme={mdTheme}>
@@ -122,8 +131,8 @@ function DashboardContent() {
               align= 'right'
               sx={{ flexGrow: 1 }}
             >
-              Hello {user.firstName}!
-              
+              {/* Hello {user.firstName}! */}
+              Hello Admin !
             </Typography>
           </Toolbar>
         </AppBar>
@@ -183,11 +192,11 @@ function DashboardContent() {
                     align= 'left'
                     sx={{ flexGrow: 1 }}
                   >
-                    ACCOUNT BALANCE: ${new Intl.NumberFormat().format(user.accountBalance)}
+                    ACCOUNT MANAGEMENT
                   </Typography>
                   
 
-                  <Transfer />
+                  <CreateUser />
                 </Paper>
               </Grid>
               {/* Recent Deposits */}
@@ -197,7 +206,7 @@ function DashboardContent() {
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 300,
+                    height: 240,
                     // backgroundColor: "#bec7f8" 
                   }}
                 >
@@ -222,21 +231,14 @@ function DashboardContent() {
                   >
                     USER_ID: {user.userID}
                   </Typography>
-                  
-                  <Button variant="text" size="small" onClick={()=>setShowResetPassword(!showResetPassword)}>{showResetPassword? "CLOSE" : "RESET PASSWORD"}</Button>
-                  {showResetPassword? <Password /> : null}
                 </Paper>
               </Grid>
-  
+              {/* Recent Orders */}
+              
               <Grid item xs={12}>
-                <Paper 
-                  sx={{ 
-                    p: 2, 
-                    display: 'flex', 
-                    flexDirection: 'column' 
-                  }}
-                >
-                  <Transactions />
+                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
+                 
+                  <Users />
                 </Paper>
               </Grid>
             </Grid>

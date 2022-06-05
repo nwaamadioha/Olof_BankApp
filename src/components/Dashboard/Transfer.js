@@ -1,8 +1,11 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
 import Button from "@mui/material/Button";
+import { TextField, Typography } from '@mui/material';
 import axios from "axios";
+
+import {AuthContext} from "../../context/AuthContext.js"
+
 
 
 const Transfer = () => {
@@ -14,7 +17,9 @@ const Transfer = () => {
         amount: "",
         swiftCode: ""
     });
-    
+    const [message, setMessage] = useState("")
+    const {user} = useContext(AuthContext);
+   
     const handleChange = (e) => {
         const {id, value} = e.target
         setTransferForm((prevValue) => {
@@ -27,7 +32,6 @@ const Transfer = () => {
         if (recieverName !== "" && accountNumber !== "" && amount !== "" && swiftCode !==""){
           setActivateButton(false)
         }
-        // console.log(transferForm)
     }
     
     const reveal = () => {
@@ -39,20 +43,19 @@ const Transfer = () => {
             amount: "",
             swiftCode: ""
         })
+        setActivateButton(true)
     }
  
-
-    const makeTransfer = () => {
-        console.log(transferForm)
-        axios.post("", transferForm)
-          .then(res => console.log(res.data))
-        setTransferForm({
-            recieverName: "",
-            accountNumber: "",
-            amount: "",
-            swiftCode: ""
-        })
+    const makeTransfer = async (e) => {
+      e.preventDefault();
+      await axios.post(`/transactions/transfer/${user._id}`, transferForm)
+        .then(
+          res => setMessage(res.data)
+        )
+        .catch(error => console.log(error))
+      reveal();
     }
+    
   return (
     <>
     <Box
@@ -120,7 +123,7 @@ const Transfer = () => {
         </Button>
       </div>
      </div> )
-      : null}
+      : (<Typography sx={{color:"green"}}>{message}</Typography>)}
     </Box>
   </>
   )

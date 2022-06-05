@@ -1,5 +1,5 @@
 import React from 'react'
-import { FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems, FooterLinkTitle, FooterLink, FooterBottom, FooterBottomWrap, SocialLogo, WebsiteRights } from "./FooterElement";
+import { FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems, FooterLinkTitle, FooterBottom, FooterBottomWrap, SocialLogo, WebsiteRights } from "./FooterElement";
 import { animateScroll as scroll } from 'react-scroll';
 
 
@@ -11,35 +11,27 @@ export const Footer = () => {
   return (
     <FooterContainer>
       <FooterWrap>
-          <FooterLinksContainer>
-              <FooterLinksWrapper>
-                  <FooterLinkItems>
-                      <FooterLinkTitle>About Us</FooterLinkTitle>
-                      <FooterLink to="/login">Home</FooterLink>
-                      <FooterLink to="/login">How it works</FooterLink>
-                      <FooterLink to="/login">Services</FooterLink>
-                      {/* <FooterLink to="/login">About Us</FooterLink> */}
-                      <FooterLink to="/login">Contact Us</FooterLink>                  
-                  </FooterLinkItems>
-                  {/* <FooterLinkItems>
-                      <FooterLinkTitle>About Us</FooterLinkTitle>
-                      <FooterLink to="/login">Home</FooterLink>
-                      <FooterLink to="/login">How it works</FooterLink>
-                      <FooterLink to="/login">Services</FooterLink>
-                      <FooterLink to="/login">About Us</FooterLink>
-                      <FooterLink to="/login">Contact Us</FooterLink>                  
-                  </FooterLinkItems> */}
-              </FooterLinksWrapper>
-          </FooterLinksContainer>
-          <FooterBottom>
-              <FooterBottomWrap>
-                  <SocialLogo to='/' onClick={toggleHome}>
-                      olofbank
-                  </SocialLogo>
-                  <WebsiteRights>olofbank © { new Date().getFullYear()} All rights reserved.</WebsiteRights>
-              </FooterBottomWrap>
-          </FooterBottom>
+        <SocialLogo to='/' onClick={toggleHome}>
+          olofbank
+        </SocialLogo>
+        <FooterLinksContainer>
+          <FooterLinksWrapper>
+            <FooterLinkItems>
+              <FooterLinkTitle>Call Us</FooterLinkTitle>
+              <FooterLinkTitle>+49 (567) 78923</FooterLinkTitle>   
+            </FooterLinkItems>
+            <FooterLinkItems>
+              <FooterLinkTitle>Email Us</FooterLinkTitle>
+              <FooterLinkTitle> secure@olofbank.com</FooterLinkTitle>   
+            </FooterLinkItems>
+          </FooterLinksWrapper>
+        </FooterLinksContainer>
       </FooterWrap>
+      <FooterBottom>
+        <FooterBottomWrap>
+          <WebsiteRights>olofbank © { new Date().getFullYear()} All rights reserved.</WebsiteRights>
+        </FooterBottomWrap>
+      </FooterBottom>
     </FooterContainer>
   )
 }
