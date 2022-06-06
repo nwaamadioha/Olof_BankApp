@@ -6,7 +6,7 @@ export const Nav = styled.nav`
   ${'' /* background: #fff; */}
   background: ${({scrollNav}) => (scrollNav? '#fff' : 'transperent')};
   height: 80px;
-  margin-top: -80px;
+  ${'' /* margin-top: -80px; */}
   display: flex;
   justify-contents: center;
   align-items: center;

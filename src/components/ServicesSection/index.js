@@ -14,10 +14,8 @@ const Services = () => {
           <ServicesH2>Gold Loan</ServicesH2>
           <ServicesP>Olof Bank's program combines the security of gold with the opportunity for investment.</ServicesP>
           <Button
-            to='home'
-            smooth={true}
+            to='/getstarted'
             duration={500}
-            spy={true}
             exact='true'
             offset={-80}
             primary={true ? 1 : 0} 
@@ -31,10 +29,8 @@ const Services = () => {
           <ServicesH2>Prepaid Visa Card</ServicesH2>
           <ServicesP>Olof's reloadable Visa card makes your everyday purchases fast, easy, convenient and secure.</ServicesP>
           <Button
-            to='home'
-            smooth={true}
+            to='/getstarted'
             duration={500}
-            spy={true}
             exact='true'
             offset={-80}
             primary={true ? 1 : 0} 
@@ -48,10 +44,8 @@ const Services = () => {
           <ServicesH2>Wire Transfers</ServicesH2>
           <ServicesP>Olof has developed strong international correspondent banking relationships over the years</ServicesP>
           <Button
-            to='home'
-            smooth={true}
+            to='/getstarted'
             duration={500}
-            spy={true}
             exact='true'
             offset={-80}
             primary={true ? 1 : 0} 

@@ -7,6 +7,7 @@ import AdminPage from "./pages/admin";
 import {useContext} from "react";
 import { AuthContext } from './context/AuthContext';
 import NotFound from './pages/notfound';
+import Getstarted from './pages/getstarted';
 
 function App() {
   const ProtectedRoute = ({children}) =>{
@@ -31,7 +32,7 @@ function App() {
         <Route path="/" element={<Home />} exact/>
         <Route path="/home" element={<Home />} exact/>
         <Route path="/login" element={<LoginPage />} exact/>
-        
+        <Route path="getstarted" element={<Getstarted/>} exact/>
         <Route path="/dashboard" element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} exact/>   
         <Route path="/admin" element={<RestrictedRoute><AdminPage /></RestrictedRoute>}  />
         

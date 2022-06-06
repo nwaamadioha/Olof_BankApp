@@ -16,10 +16,8 @@ const AboutSection = ({id, lightBg, imgStart, topLine, headline, description, bu
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
                   <Button 
-                    to='home'
-                    smooth={true}
+                    to='/getstarted'
                     duration={500}
-                    spy={true}
                     exact='true'
                     offset={-80}
                     primary={primary ? 1 : 0} 

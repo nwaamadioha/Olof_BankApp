@@ -28,11 +28,16 @@ const Contact = () => {
    }
    const handleClick = async (e) => {
        e.preventDefault();
-       await axios.post("/contactForm", cform)
-       .then(
-         res => setMessage(res.data)
+       await axios.post("/contact", cform)
+         .then(
+           res => setMessage(res.data)
        )
        .catch(error => console.log(error))
+       setCForm({
+        name: "",
+        email: "",
+        message: ""
+       });
    }
    
   return (
@@ -55,6 +60,7 @@ const Contact = () => {
             noValidate 
             autoComplete="off"  
           > 
+            <Typography align="right" variant="h6" color="green">{message? message : null}</Typography>
             <div>
               <TextField
                 required
@@ -85,7 +91,7 @@ const Contact = () => {
             </div>
           </Box>
           <Button disabled={done} onClick={handleClick} variant="contained" endIcon={<SendIcon />}>
-            {message? message : "Send"}
+           Send
           </Button>
         </Grid>
       </Grid>

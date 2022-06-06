@@ -20,7 +20,7 @@ const HeroSection = () => {
           <HeroP>Secure your Future with International Private Banking </HeroP>
           <HeroBtnWrapper>
             <Button 
-              to="signup" 
+              to="/getstarted" 
               onMouseEnter={onHover} 
               onMouseLeave={onHover}
               primary='true'

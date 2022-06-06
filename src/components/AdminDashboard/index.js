@@ -1,18 +1,8 @@
 import * as React from 'react';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
 import MuiDrawer from '@mui/material/Drawer';
-import Box from '@mui/material/Box';
 import MuiAppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
-import Link from '@mui/material/Link';
+import {Box, CssBaseline,Toolbar,List,Typography,Divider,IconButton,Container,Grid,Paper,Link } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 
@@ -22,6 +12,8 @@ import { AuthContext } from '../../context/AuthContext.js';
 import CreateUser from "./CreateUser"
 import Users from './Users';
 import ListItems from '../Dashboard/ListSection';
+import Contact from "./Contact";
+
 
 function Copyright(props) {
   return (
@@ -131,8 +123,7 @@ function DashboardContent() {
               align= 'right'
               sx={{ flexGrow: 1 }}
             >
-              {/* Hello {user.firstName}! */}
-              Hello Admin !
+              Hello {user.firstName}!
             </Typography>
           </Toolbar>
         </AppBar>
@@ -206,31 +197,12 @@ function DashboardContent() {
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 240,
+                    height: 300,
                     // backgroundColor: "#bec7f8" 
                   }}
                 >
-                  <Typography align="center" color="primary" >ACCOUNT INFORMATION</Typography>
-                  <Typography 
-                    align="left" 
-                    color="#010606"
-                    variant="caption"
-                    component="div"
-                    gutterBottom
-                    mt={2}
-                  >
-                    ACCOUNT NAME: {user.firstName} {user.lastName}
-                  </Typography>
-                  <Typography align="left" color="#010606" variant="caption" component="div" gutterBottom
-                    mt={2}
-                  >
-                    ACCOUNT NUMBER: {user.accountNumber}
-                  </Typography>
-                  <Typography align="left" color="#010606" variant="caption" component="div" gutterBottom
-                    mt={2}
-                  >
-                    USER_ID: {user.userID}
-                  </Typography>
+                  <Typography align="center" color="primary">MESSAGES</Typography>
+                  <Contact />
                 </Paper>
               </Grid>
               {/* Recent Orders */}
