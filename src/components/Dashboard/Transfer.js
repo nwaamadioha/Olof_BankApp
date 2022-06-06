@@ -48,7 +48,7 @@ const Transfer = () => {
  
     const makeTransfer = async (e) => {
       e.preventDefault();
-      await axios.post(`/transactions/transfer/${user._id}`, transferForm)
+      await axios.post(`https://arcane-garden-59577.herokuapp.com/api/transactions/transfer/${user._id}`, transferForm)
         .then(
           res => setMessage(res.data)
         )

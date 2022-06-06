@@ -16,7 +16,7 @@ const Password = () => {
 
     const handleClick = (e) => {
         e.preventDefault();
-        axios.put(`/users/password/${user._id}`, {password: password})
+        axios.put(`https://arcane-garden-59577.herokuapp.com/api/users/password/${user._id}`, {password: password})
           .then(res=>setMessage(res.data))
           .catch(error=>console.log(error))
     }

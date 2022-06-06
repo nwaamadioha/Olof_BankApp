@@ -8,7 +8,7 @@ const ContactBoard = () => {
     const [showMessage, setShowMessage] = useState(false)
 
     useEffect(()=> {
-        axios.get("/contact")
+        axios.get("https://arcane-garden-59577.herokuapp.com/api/contact/")
           .then(res=>setContacts(res.data))
           .catch(error=> console.log(error))
         
@@ -19,12 +19,12 @@ const ContactBoard = () => {
 
     const handleClick = async (id) => {
         setShowMessage(!showMessage)
-        await axios.get(`/contact/${id}`)
+        await axios.get(`https://arcane-garden-59577.herokuapp.com/api/contact/${id}`)
           .then(res=>setMessageBody(res.data.message))
           .catch(error=>console.log(error))
     }
     const handleDelete = async (id) => {
-        await axios.delete(`/contact/${id}`)
+        await axios.delete(`https://arcane-garden-59577.herokuapp.com/api/contact/${id}`)
         setMessageBody("")
     }
     
