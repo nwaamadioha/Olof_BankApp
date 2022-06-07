@@ -107,7 +107,7 @@ const Users = () => {
             <TableCell>Acc/Number</TableCell>
             <TableCell>Acc/Balance</TableCell>
             <TableCell>Trans/Count</TableCell>
-            <TableCell>Status</TableCell>
+            <TableCell>Email</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>   
@@ -119,7 +119,7 @@ const Users = () => {
                 <TableCell>{row.accountNumber}</TableCell>
                 <TableCell>${new Intl.NumberFormat().format(row.accountBalance)}</TableCell>
                 <TableCell>{row.transactionCount}</TableCell>
-                <TableCell>{row.lastName}</TableCell>
+                <TableCell>{row.email}</TableCell>
               </TableRow>
             )
           )}
