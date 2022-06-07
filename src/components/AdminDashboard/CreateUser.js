@@ -10,7 +10,7 @@ const CreateUser = () => {
     const [message, setMessage] = useState("")
     const [userF, setUserF] = useState({
         userID: "",
-        password:"",
+        email:"",
         firstName:"",
         lastName: "",
         accountNumber:"",
@@ -25,8 +25,8 @@ const CreateUser = () => {
                 [id]: value
             }
         })
-        const {userID, password, firstName, lastName, accountNumber, accountBalance} = userF;
-        if (userID !== "" && password !== "" && firstName !== "" && lastName !=="" && accountNumber !=="" && accountBalance !==""){
+        const {userID, email, firstName, lastName, accountNumber, accountBalance} = userF;
+        if (userID !== "" && email !== "" && firstName !== "" && lastName !=="" && accountNumber !=="" && accountBalance !==""){
           setDone(false)
         }
     }
@@ -39,7 +39,7 @@ const CreateUser = () => {
         
         setUserF({
             userID: "",
-            password:"",
+            email:"",
             firstName:"",
             lastName: "",
             accountNumber:"",
@@ -97,10 +97,10 @@ const CreateUser = () => {
           <div>
           <TextField
               required
-              id="password"
+              id="email"
               onChange={handleChange}
-              value={userF.password}
-              label="Password"
+              value={userF.email}
+              label="Email"
               InputLabelProps={{
                 shrink: true,
               }}
