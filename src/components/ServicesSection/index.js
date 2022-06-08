@@ -27,7 +27,7 @@ const Services = () => {
         <ServicesCard>
           <ServicesIcon src={Icon2}/>
           <ServicesH2>Prepaid Visa Card</ServicesH2>
-          <ServicesP>Olof's reloadable Visa card makes your everyday purchases fast, easy, convenient and secure.</ServicesP>
+          <ServicesP>Reloadable Visa card makes your everyday purchases fast, easy, convenient and secure.</ServicesP>
           <Button
             to='/getstarted'
             duration={500}
