@@ -7,7 +7,7 @@ import { homeObjOne, homeObjTwo, homeObjThree } from '../components/AboutSection
 import Services from '../components/ServicesSection';
 import Footer from "../components/Footer";
 import Contact from "../components/Contact"
-
+import PartnerSection from '../components/Partners';
 
 const Home = () => {
 
@@ -27,6 +27,7 @@ const Home = () => {
         <AboutSection {...homeObjThree}/>
         <Services />
         <Contact />
+        <PartnerSection />
         <Footer />
     </>
   )
