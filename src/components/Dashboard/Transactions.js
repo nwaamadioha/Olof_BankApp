@@ -15,6 +15,8 @@ const Transactions = () => {
   // const [isDone, setIsDone] = useState(false);
   const isDone = useRef(false)
   const [rows, setRows] = useState([]);
+
+  //Get all transaction ids from the user
   useEffect(() => {
     const transactions = user.transactions
  
