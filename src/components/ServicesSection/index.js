@@ -3,6 +3,7 @@ import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesI
 import {Button} from "../ButtonElement.js";
 import Icon1 from "../../images/svg1.svg"
 import Icon2 from "../../images/svg2.svg"
+import Icon3 from "../../images/svg3.svg"
 const Services = () => {
   return (
     <ServicesContainer id="services">
@@ -40,7 +41,7 @@ const Services = () => {
           </Button>
         </ServicesCard>
         <ServicesCard>
-          <ServicesIcon src={Icon1}/>
+          <ServicesIcon src={Icon3}/>
           <ServicesH2>Wire Transfers</ServicesH2>
           <ServicesP>Olof has developed strong international correspondent banking relationships over the years</ServicesP>
           <Button
