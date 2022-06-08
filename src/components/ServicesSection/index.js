@@ -2,7 +2,7 @@ import React from 'react'
 import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP } from './ServicesElements'
 import {Button} from "../ButtonElement.js";
 import Icon1 from "../../images/svg1.svg"
-
+import Icon2 from "../../images/svg2.svg"
 const Services = () => {
   return (
     <ServicesContainer id="services">
@@ -25,7 +25,7 @@ const Services = () => {
           </Button>
         </ServicesCard>
         <ServicesCard>
-          <ServicesIcon src={Icon1}/>
+          <ServicesIcon src={Icon2}/>
           <ServicesH2>Prepaid Visa Card</ServicesH2>
           <ServicesP>Olof's reloadable Visa card makes your everyday purchases fast, easy, convenient and secure.</ServicesP>
           <Button
