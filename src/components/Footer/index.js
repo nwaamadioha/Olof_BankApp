@@ -22,7 +22,7 @@ export const Footer = () => {
             </FooterLinkItems>
             <FooterLinkItems>
               <FooterLinkTitle>Email Us</FooterLinkTitle>
-              <FooterLinkTitle> secure@olofbank.com</FooterLinkTitle>   
+              <FooterLinkTitle> info@olofinternationalservices.com</FooterLinkTitle>   
             </FooterLinkItems>
           </FooterLinksWrapper>
         </FooterLinksContainer>
