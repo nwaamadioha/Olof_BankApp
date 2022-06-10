@@ -13,7 +13,7 @@ const PartnerSection = () => {
     <>
         <PartnerContainer>
           <PartnerContent>
-            <PartnerH1>PARTNERS & RECOGNITIONS</PartnerH1>
+            <PartnerH1>PARTNERS & MEMBERSHIPS</PartnerH1>
             <PartnerWrapper>
                 
                 <ImgWrap>
