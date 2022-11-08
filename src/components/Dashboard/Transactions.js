@@ -64,7 +64,7 @@ const Transactions = () => {
                 <TableCell>{row.date}</TableCell>
                 <TableCell>{row.recieverName}</TableCell>
                 <TableCell>{row.accountNumber}</TableCell>
-                <TableCell>${new Intl.NumberFormat().format(row.amount)}</TableCell>
+                <TableCell>{new Intl.NumberFormat("en-US", {style: "currency", currency: "USD"}).format(row.amount)}</TableCell>
                 <TableCell>{row.transactionType}</TableCell>
                 <TableCell align="right">{row.status}</TableCell>
               </TableRow>
