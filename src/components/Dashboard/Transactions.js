@@ -22,7 +22,7 @@ const Transactions = () => {
  
     if(!isDone.current) {
       transactions.map((transaction) => ( 
-      axios.get(`https://arcane-garden-59577.herokuapp.com/api/transactions/${transaction}`)
+      axios.get(`https://web-production-1d71.up.railway.app/api/transactions/${transaction}`)
         .then(
           res => {
             setRows((prevValue) => [ 

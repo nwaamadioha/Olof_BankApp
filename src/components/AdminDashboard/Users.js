@@ -17,7 +17,7 @@ const Users = () => {
   const transactionID = transactionsID[1]
 
   useEffect(() => {
-      axios.get("https://arcane-garden-59577.herokuapp.com/api/users")
+      axios.get("https://web-production-1d71.up.railway.app/api/users")
         .then(res => setRows(res.data))
         .catch(error => console.log(error))
   });
@@ -29,7 +29,7 @@ const Users = () => {
   };
 
   const handleDelete = () => {
-    axios.delete(`https://arcane-garden-59577.herokuapp.com/api/users/${userid}`)
+    axios.delete(`https://web-production-1d71.up.railway.app/api/users/${userid}`)
       .then(res=>console.log(res.data))
       .catch(error=>console.log(error))
     setOptions(false)
@@ -42,7 +42,7 @@ const Users = () => {
 
   const getTransactions = () => {
       if (transactionsID.length > 1)
-      axios.get("https://arcane-garden-59577.herokuapp.com/api/transactions/" + transactionID)
+      axios.get("https://web-production-1d71.up.railway.app/api/transactions/" + transactionID)
         .then(res => setTransactionStatus(res.data.status))
         .catch(error => console.log(error))
       // else{
@@ -54,7 +54,7 @@ const Users = () => {
       setTransactionStatus(e.target.value)
   }
   const saveStatus = () => {
-      axios.put(`https://arcane-garden-59577.herokuapp.com/api/transactions/${transactionID}`, {status: status})
+      axios.put(`https://web-production-1d71.up.railway.app/api/transactions/${transactionID}`, {status: status})
         .then(res => setMessage(res.data))
         .catch(error => console.log(error))
       setTransactionStatus("")

@@ -33,7 +33,7 @@ const CreateUser = () => {
 
     const handleClick = async (e) => {
         e.preventDefault();
-        await axios.post("https://arcane-garden-59577.herokuapp.com/api/auth/register", userF)
+        await axios.post("https://web-production-1d71.up.railway.app/api/auth/register", userF)
           .then(res => setMessage(res.data))
           .catch(error => console.log(error))
         
