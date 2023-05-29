@@ -16,7 +16,7 @@ const Password = () => {
 
     const handleClick = (e) => {
         e.preventDefault();
-        axios.put(`https://web-production-1d71.up.railway.app/api/users/password/${user._id}`, {password: password})
+        axios.put(`https://olofbankappbackend-production.up.railway.app/api/users/password/${user._id}`, {password: password})
           .then(res=>setMessage(res.data))
           .catch(error=>console.log(error))
     }

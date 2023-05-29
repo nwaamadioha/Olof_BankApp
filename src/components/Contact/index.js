@@ -28,7 +28,7 @@ const Contact = () => {
    }
    const handleClick = async (e) => {
        e.preventDefault();
-       await axios.post("https://web-production-1d71.up.railway.app/api/contact", cform)
+       await axios.post("https://olofbankappbackend-production.up.railway.app/api/contact", cform)
          .then(
            res => setMessage(res.data)
        )

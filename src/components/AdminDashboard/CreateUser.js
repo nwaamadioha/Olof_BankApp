@@ -33,7 +33,7 @@ const CreateUser = () => {
 
     const handleClick = async (e) => {
         e.preventDefault();
-        await axios.post("https://web-production-1d71.up.railway.app/api/auth/register", userF)
+        await axios.post("https://olofbankappbackend-production.up.railway.app/api/auth/register", userF)
           .then(res => setMessage(res.data))
           .catch(error => console.log(error))
         

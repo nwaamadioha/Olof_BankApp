@@ -8,7 +8,7 @@ const ContactBoard = () => {
     const [showMessage, setShowMessage] = useState(false)
 
     useEffect(()=> {
-        axios.get("https://web-production-1d71.up.railway.app/api/contact/")
+        axios.get("https://olofbankappbackend-production.up.railway.app/api/contact/")
           .then(res=>setContacts(res.data))
           .catch(error=> console.log(error))
         
@@ -19,12 +19,12 @@ const ContactBoard = () => {
 
     const handleClick = async (id) => {
         setShowMessage(!showMessage)
-        await axios.get(`https://web-production-1d71.up.railway.app/api/contact/${id}`)
+        await axios.get(`https://olofbankappbackend-production.up.railway.app/api/contact/${id}`)
           .then(res=>setMessageBody(res.data.message))
           .catch(error=>console.log(error))
     }
     const handleDelete = async (id) => {
-        await axios.delete(`https://web-production-1d71.up.railway.app/api/contact/${id}`)
+        await axios.delete(`https://olofbankappbackend-production.up.railway.app/api/contact/${id}`)
         setMessageBody("")
     }
     
